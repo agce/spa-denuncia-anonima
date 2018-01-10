@@ -1,2 +1,222 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+a, a:hover
+{
+    text-decoration:         none !important;
+}
+body
+{
+    background:              linear-gradient(to right bottom, #FFF, #eaeaea);    
+    min-height:              100vh;
+}
+
+
+/*-- PORTADA --*/
+.portada-container
+{
+    position:                absolute;
+    top:                     50%;
+    left:                    50%;
+    transform:               translate(-50%, -50%);
+}
+.logo-center
+{
+    display:                 block;
+    position:                relative;
+    height:                  100px;
+    width:                   auto;
+    margin-left:             auto;
+    margin-right:            auto;
+    margin-bottom:           25px;
+}
+.next-btn
+{
+    display:                 block;
+    position:                relative;
+    width:                   160px;
+    height:                  auto;
+    padding-top:             12px;
+    padding-bottom:          12px;
+    background:              #9cc85e;
+    border-radius:           30px;
+    text-align:              center;
+    margin-left:             auto;
+    margin-right:            auto;
+    font-size:               14px;
+    color:                   #FFF;
+    font-weight:             700;
+    margin-top:              35px;
+    border:                  none;
+}
+.next-btn:hover
+{
+    background:              #333;
+    color:                   #9cc85e;
+}
+
+/*-- NEW --*/
+.logo-nav
+{
+    display:                 block;
+    position:                relative;
+    width:                   100%;
+    height:                  auto;
+    padding-top:             10px;
+    padding-bottom:          10px;
+    background:              #FFF;
+    margin-bottom:           15px;
+    border-bottom:           solid #eaeaea 1px;
+}
+.logo-nav a, .logo-nav a img
+{
+    display:                 block;
+    position:                relative;
+    width:                   130px;
+    height:                  auto;
+    margin-left:             auto;
+    margin-right:            auto;
+}
+h3
+{
+    display:                 block;
+    position:                relative;
+    font-size:               24px;
+    font-weight:             700;
+    color:                   #9DCB54;
+}
+p
+{
+    display:                 block;
+    position:                relative;
+    font-size:               16px;
+    font-weight:             400;
+    color:                   #333;
+}
+.btn-verde
+{
+    display:                block;
+    position:               relative;
+    width:                  175px;
+    height:                 auto;
+    padding:                10px;
+    background:             #79A525;
+    color:                  #FFF;
+    font-size:              12px;
+    font-weight:            700;
+    text-align:             center;
+    margin-left:            auto;
+    margin-right:           auto;
+    margin-top:             25px;
+}
+.btn-verde:hover
+{
+    background:             #FFF;
+    border:                 2px solid #79A525;
+    color:                  #79A525;
+}
+.last-btn
+{
+    margin-bottom:          100px;
+}
+.volver-a-sitio
+{
+    display:                block;
+    position:               fixed;
+    width:                  100%;
+    bottom:                 0;
+    left:                   0;
+    font-size:              12px;
+    font-weight:            700;
+    color:                  #333;
+    background:             #eaeaea;
+    padding:                15px;
+}
+.volver-a-sitio img
+{
+    display:                inline-block;
+    position:               relative;
+    height:                 15px;
+    width:                  auto;
+    margin-right:           10px;
+}
+.section
+{
+    padding-top:            15px;
+    padding-bottom:         15px;
+    border-bottom:          1px solid #dadada;
+}
+.form-label
+{
+    display:                block;
+    position:               relative;
+    font-size:              14px;
+    margin-top:             10px;
+}
+.form-input
+{
+    display:                block;
+    position:               relative;
+    width:                  100%;
+    height:                 35px;
+    background:             #FFF;
+    border:                 #dadada solid 1px;
+    padding:                3px;
+}
+.form-area
+{
+    display:                block;
+    position:               relative;
+    width:                  100%;
+    height:                 100px;
+    background:             #FFF;
+    border:                 #dadada solid 1px;
+    padding:                3px;
+}
+.last-btn
+{
+    margin-bottom:          100px;
+}
+
+/*-- LOCATION VIEW --*/
+.location-icon
+{
+    display:                block;
+    position:               relative;
+    width:                  45px;
+    height:                 auto;
+    margin-left:            auto;
+    margin-right:           auto;
+    margin-bottom:          10px;
+}
+.caption
+{
+    font-size:              12px;
+}
+#ubicacion-view
+{
+    display:                none;
+}
+
+/*-- MAPA VIEW --*/
+#ubicacion-mapa-view
+{
+    display:                block;
+    margin-top:             25px;
+}
+.mapa-ubicacion
+{
+    display:                     block;
+    position:                    relative;
+    height:                      400px;
+    margin-top:                  25px;
+    margin-bottom:               25px;
+}
+#map
+{
+    display:                     block;
+    position:                    relative;
+    width:                       100%;
+    height:                      100%;
+}
+

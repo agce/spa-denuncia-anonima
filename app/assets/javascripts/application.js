@@ -15,3 +15,16 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  
+  $('#anchor-ubicacion').click(function(){
+      $('#portada-view').css("display","none");
+      $('#ubicacion-view').css("display","block");
+  });
+  $('#anchor-map').click(function(){
+      $('#ubicacion-view').css("display","none");
+      $('#ubicacion-mapa-view').css("display","block");
+  });
+    
+});

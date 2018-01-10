@@ -1,0 +1,45 @@
+<div class="logo-nav"><!-- NAVBAR -->
+    <a href="/reports"><%= image_tag("logo.png") %></a>    
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="text-center">Denuncias</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="section col-xs-12">
+            <div class="col-md-2">
+                <strong>Folio</strong>
+            </div>
+            <div class="col-md-5">
+                <strong>Direcci&oacute;n</strong>
+            </div>
+            <div class="col-md-3">
+                <strong>Ciudad</strong>
+            </div>
+            <div class="col-md-2">
+                <strong>Fecha</strong>
+            </div>
+        </div>
+        <% @reports.order("created_at desc").each do |report| %>
+        <div class="section col-xs-12">
+            <div class="col-md-2">
+                <%= link_to report.id+1500, report_path(report) %>
+            </div>
+            <div class="col-md-5">
+                <%= link_to report.calle, report_path(report) %>
+            </div>
+            <div class="col-md-3">
+                <%= report.municipio %>
+            </div>
+            <div class="col-md-2">
+                <%= link_to report.created_at.strftime("%Y-%m-%d"), report_path(report) %>
+            </div>
+        </div>
+        <% end %>
+        
+    </div>
+</div>
+

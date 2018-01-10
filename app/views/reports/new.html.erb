@@ -1,0 +1,80 @@
+<!-- UBICACION VIEW MAPA -->
+<div class="container" id="ubicacion-mapa-view">
+    <div class="row">
+        <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
+            <%= image_tag("location.svg", class: "location-icon") %>
+            <h3 class="text-center">Ubicaci&oacute;n de fuente contaminante</h3>
+            <p class="text-center">Es necesario que permitas el uso de tu ubicaci&oacute;n en tu navegador.
+            <br>
+            Corrige tu ubicaci&oacute;n posicionando el marcador.
+            </p>
+        </div>
+        
+        <div class="col-xs-12 mapa-ubicacion">
+            <div id="map"></div>
+            
+            <p>Coord: <span id="clat"><!-- COORDENADA --></span></p>
+        </div>
+        
+        <div class="col-xs-12 section">
+            <h3>Direcci&oacute;n de fuente contaminante</h3>
+            <%= form_for @report do |f| %>
+                
+                <div class="col-xs-12 col-md-6">
+                <%= f.label :calle, class: "form-label" %>
+                <%= f.text_field :calle, id: "calle", class: "form-input" %>
+                </div>
+                
+                <div class="col-xs-12 col-md-6">
+                <%= f.label :colonia, class: "form-label" %>
+                <%= f.text_field :colonia, id: "colonia", class: "form-input" %>
+                </div>
+                
+                <div class="col-xs-12 col-md-6">
+                <%= f.label :municipio, class: "form-label" %>
+                <%= f.text_field :municipio, id: "ciudad", class: "form-input" %>
+                </div>
+                
+                <div class="col-xs-12 col-md-6">
+                <%= f.label :cp, class: "form-label" %>
+                <%= f.text_field :cp, id: "cp", class: "form-input" %>
+                </div>
+                
+                <div class="hidden-xs hidden-sm hidden-md hidden-lg">
+                <%= f.text_field :coords, id: "coords", class: "form-input" %>    
+                </div>
+                
+        </div>
+        
+        <div class="col-xs-12 section">
+                
+                <h3>Declaraci&oacute;n</h3>
+                
+                <%= f.label :hechos, class: "form-label" %>
+                <%= f.text_area :hechos, class: "form-area" %>
+                
+                <%= f.label :referencias, class: "form-label" %>
+                <%= f.text_area :referencias, class: "form-area" %>
+                
+        </div>
+        
+        <div class="col-xs-12 section">
+            
+                <h3>Seguimiento</h3>
+                <p>Para poder actualizarte en el estado de tu denuncia o si requerimos m&aacute;s informaci&oacute;n proporcionanos un correo electr&oacute;nico de contacto, este no es obligatorio pero puede ser de ayuda.</p>
+                
+                <%= f.label :email, class: "form-label" %>
+                <%= f.email_field :email, class: "form-input" %>
+        </div>
+        
+        <div class="col-xs-12">
+                <%= f.submit 'Crear denuncia', class: "next-btn last-btn" %>
+            <% end %>
+        </div>
+    </div>
+</div>
+
+
+<a href="http://www.spabc.gob.mx/" class="volver-a-sitio"><%= image_tag("left-arrow.svg") %> VOLVER A SITIO PRINCIPAL</a>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAat7CnUNLT4-2Sp76qKGJHUWuqLWXiAl8&libraries=geometry&callback=initMap" async defer></script>

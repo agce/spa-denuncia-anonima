@@ -1,0 +1,29 @@
+<div class="logo-nav"><!-- NAVBAR -->
+    <a href="/reports"><%= image_tag("logo.png") %></a>    
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            Folio: <%= @report.id+1500 %>
+            <br>
+            Calle: <%= @report.calle %>
+            <br>
+            Colonia: <%= @report.colonia %>
+            <br>
+            Ciudad: <%= @report.municipio %>
+            <br>
+            C.P.: <%= @report.cp %>
+            <br>
+            Coordenas: <%= @report.coords %>
+            <br>
+            Hechos: <%= @report.hechos %>
+            <br>
+            Referencias: <%= @report.referencias %>
+            <br>
+            Denuncia creada: <%= @report.created_at.strftime("%Y-%m-%d") %>
+        </div>
+    </div>
+</div>
+
+<a href="/reports" class="volver-a-sitio"><%= image_tag("left-arrow.svg") %> VOLVER A DENUNCIAS</a>
